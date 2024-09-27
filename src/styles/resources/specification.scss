@@ -1,0 +1,239 @@
+/* ---- Specification ---- */
+* {
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  margin: 0;
+  padding: 0px;
+  scroll-margin-top: $scroll-margin-top;
+
+  @include mq($phablet) {
+    scroll-margin-top: 100px;
+  }
+}
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  @include reset-indents();
+  background: $background-color;
+  @include font-size($font-size);
+  font-weight: $font-weight;
+  color: $font-color;
+  overflow-x: hidden;
+  padding-right: 0 !important;
+}
+
+section {
+  padding-bottom: $section-gutter;
+
+  @include mq($tablet-large) {
+    padding-bottom: 80px;
+  }
+
+  @include mq($phone) {
+    padding-bottom: 64px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include reset-indents();
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+}
+
+h4,
+h5,
+h6 {
+  font-weight: 500;
+}
+
+h1 {
+  @include font-size($h1-font-size);
+
+  @include mq($tablet-large) {
+    @include font-size(46px);
+  }
+}
+
+h2 {
+  @include font-size($h2-font-size);
+
+  @include mq($tablet-large) {
+    @include font-size(24px);
+  }
+
+  @include mq($tablet) {
+    @include font-size(20px);
+  }
+}
+
+h3 {
+  @include font-size($h3-font-size);
+}
+
+h4 {
+  @include font-size($h4-font-size);
+}
+
+p {
+  @include reset-indents();
+}
+
+a {
+  @include reset-indents();
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+li {
+  @include reset-indents();
+  display: block;
+}
+
+img {
+  object-fit: cover;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  background: none;
+  resize: none;
+}
+
+button {
+  &[disabled] {
+    @include transition();
+    opacity: 0.5;
+    cursor: default;
+    pointer-events: none;
+  }
+}
+
+button {
+  border: none;
+  padding: 9px 0px;
+  background: $theme-color;
+  @include font-size(18px);
+  font-weight: 600 !important;
+  text-align: center;
+  display: block;
+  cursor: pointer;
+  color: $text-color;
+}
+
+input {
+  @include font-size(18px);
+  transition: border 0.3s ease;
+  padding: 12px;
+  background: $background-color;
+  border: 2px solid $text-color;
+
+  &::placeholder {
+    color: $gray-1;
+  }
+
+  &:focus {
+    transition: border 0.3s ease;
+    border-color: $theme-color;
+  }
+}
+
+textarea {
+  @include font-size(18px);
+  border: 2px solid $text-color;
+  transition: border 0.3s ease;
+
+  &:focus {
+    transition: border 0.3s ease;
+    border-color: $theme-color;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* ---- Scroll ---- */
+::-webkit-scrollbar-track {
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: $theme-color;
+}
+
+/* ---- Selection ---- */
+::selection {
+  @include selection();
+}
+
+::-moz-selection {
+  @include selection();
+}
+
+.container {
+  @include responsive-container();
+}
+
+.next-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  flex-grow: 1;
+}
+
+.lock-scroll {
+  overflow: hidden;
+}
+
+/* ---- Other ---- */
+.swal2-styled.swal2-confirm {
+  border-radius: 0 !important;
+  background-color: $theme-color !important;
+}
+
+.swal2-icon.swal2-success .swal2-success-ring {
+  border-color: $theme-color !important;
+}
+
+.swal2-icon.swal2-success [class^="swal2-success-line"][class$="long"],
+.swal2-icon.swal2-success [class^="swal2-success-line"][class$="tip"] {
+  background-color: $theme-color !important;
+}

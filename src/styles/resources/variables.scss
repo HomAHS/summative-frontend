@@ -1,0 +1,60 @@
+/* ---- Variables ---- */
+/* -- Colors -- */
+$white-1: #fff;
+$black-1: #232323;
+$gray-1: #6f6f6f;
+
+$red-color: #b8062b;
+$green-color: #00ba34;
+
+$theme-color: #228be6;
+$admin-color: #f7316e;
+
+$background-color: $white-1;
+$text-color: $black-1;
+
+/* -- Typography -- */
+$font-family: "Montserrat", sans-serif;
+$font-weight: 400;
+$font-size: 20px;
+$font-color: $black-1;
+
+$h1-font-size: 40px;
+$h2-font-size: 30px;
+$h3-font-size: 20px;
+$h4-font-size: 18px;
+
+/* -- Transition -- */
+$transition-property: all;
+$transition-delay: 0.2s;
+$transition-timing: ease;
+
+/* -- Link -- */
+$link-hover-opacity: 0.7;
+
+/* -- Media Query Breakpoints -- */
+$phone: 480;
+$phablet: 576;
+$tablet: 768;
+$tablet-large: 992;
+$laptop: 1200;
+$desktop: 1400;
+
+$burger-point: 1240;
+
+/* -- Container -- */
+$container-default-width: 1350px;
+$container-desktop-gutter: 80;
+$container-laptop-gutter: 50;
+$container-tablet-large-gutter: 32;
+$container-tablet-gutter: 28;
+$container-phablet-gutter: 24;
+
+/* -- Gutters -- */
+$header-padding-desktop-gutter: 15px;
+$header-padding-tablet-large-gutter: 10px;
+$header-padding-tablet-gutter: 10px;
+$header-padding-phablet-gutter: 10px;
+
+$section-gutter: 100px;
+$scroll-margin-top: $section-gutter + $header-padding-tablet-gutter * 2;
