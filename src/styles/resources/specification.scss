@@ -224,6 +224,9 @@ input::-webkit-inner-spin-button {
 }
 
 /* ---- Other ---- */
+.swal2-container {
+  font-family: "Montserrat", sans-serif;
+}
 .swal2-styled.swal2-confirm {
   border-radius: 0 !important;
   background-color: $theme-color !important;

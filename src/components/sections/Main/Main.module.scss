@@ -1,2 +1,104 @@
 /* ---- Main ---- */
 @import "@resources";
+
+.title {
+  & span {
+    color: $theme-color;
+  }
+
+  margin-bottom: 15px;
+}
+
+.form {
+  max-width: 350px;
+  margin-top: 50px;
+}
+
+.choices {
+  @include flexible();
+  align-items: flex-start;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.choice {
+  @include transition();
+  pointer-events: none;
+  width: 50%;
+  opacity: 0.5;
+
+  & input {
+    @include transition();
+    width: 100%;
+  }
+}
+.activeChoice {
+  @include transition();
+  opacity: 1;
+  pointer-events: visible;
+}
+
+.audioInput {
+  position: absolute;
+  left: -1000px;
+  top: 1000px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.line {
+  @include transition();
+  display: block;
+  width: 100%;
+  height: 10px;
+  background-color: $theme-color;
+  pointer-events: visible !important;
+  cursor: pointer;
+
+  &:hover {
+    @include transition();
+    height: 15px;
+  }
+}
+
+.audioButton {
+  padding: 14px;
+  color: #fff;
+  width: 100%;
+}
+
+.input {
+  margin-top: 8px;
+}
+
+.voiceInput {
+  margin-top: 0;
+}
+
+.button {
+  @include transition();
+  margin-top: 15px;
+  color: #fff;
+
+  &:hover {
+    @include transition();
+    opacity: 0.9;
+  }
+}
+
+.subtitle {
+  margin-top: 20px;
+}
+
+.voices {
+  margin-top: 5px;
+}
+
+.voice {
+  color: gray;
+
+  & span {
+    color: $theme-color;
+    font-weight: 700;
+  }
+}

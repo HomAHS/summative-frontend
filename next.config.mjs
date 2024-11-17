@@ -21,10 +21,6 @@ const nextConfig = {
   images: { domains: ["localhost", process.env.DOMAIN] },
   env: {
     API_URL: process.env.API_URL,
-    PHONE: process.env.PHONE,
-    TELEGRAM: process.env.TELEGRAM,
-    WHATSAPP: process.env.WHATSAPP,
-    EMAIL: process.env.EMAIL,
     DOMAIN: process.env.DOMAIN,
   },
   webpack: (config, { buildId, dev, isServer, defaultLoaders }) => {
