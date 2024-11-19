@@ -198,6 +198,9 @@ const Main: FC = () => {
           <li className={styles.voice}>
             ysVYSfBJOHpqT1ulcOCT <span>(Old Man)</span>
           </li>
+          <li className={styles.voice}>
+            ULM4LbAf1sGrfC52h1aG <span>(Misha)</span>
+          </li>
         </ul>
       </div>
     </section>
